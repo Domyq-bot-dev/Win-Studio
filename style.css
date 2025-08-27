@@ -1,0 +1,65 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #1e1e2f;
+    color: #f0f0f0;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(to right, #182848, #4b6cb7);
+    padding: 2rem;
+    text-align: center;
+    border-bottom: 4px solid #ffcc00;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #e0e0e0;
+}
+
+section {
+    padding: 2rem;
+    max-width: 800px;
+    margin: auto;
+    margin-top: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+section h2 {
+    color: #ffcc00;
+    margin-bottom: 1rem;
+}
+
+section p, section ul {
+    font-size: 1.1rem;
+}
+
+section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+section ul li {
+    padding: 0.3rem 0;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #111;
+    margin-top: 2rem;
+    border-top: 2px solid #ffcc00;
+}
