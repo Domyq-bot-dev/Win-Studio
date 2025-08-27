@@ -31,15 +31,15 @@ header {
     color: #ffcc00;
 }
 
-/* Kontener główny */
+/* Kontener główny z grid */
 .container {
-    display: flex;
-    min-height: calc(100vh - 80px); /* odejmujemy header i footer */
+    display: grid;
+    grid-template-columns: 220px 1fr; /* menu + treść */
+    height: calc(100vh - 80px); /* wysokość minus header i footer */
 }
 
 /* Menu boczne */
 .sidebar {
-    width: 220px;
     background-color: #111;
     padding: 2rem 1rem;
     display: flex;
@@ -68,17 +68,14 @@ header {
 
 /* Główna treść wyśrodkowana */
 .main {
-    flex: 1;
     display: flex;
-    justify-content: center;  /* poziome wyśrodkowanie */
-    align-items: center;      /* pionowe wyśrodkowanie */
-    padding: 2rem;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
-/* Kontener dla wyśrodkowanej treści */
 .center-content {
-    max-width: 800px; /* ograniczenie szerokości treści */
+    max-width: 800px;
 }
 
 /* Nagłówki i kolory */
@@ -125,18 +122,18 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Responsywność dla małych ekranów */
+/* Responsywność */
 @media (max-width: 768px) {
     .container {
-        flex-direction: column;
+        grid-template-columns: 1fr;
+        height: auto;
     }
 
     .sidebar {
-        width: 100%;
         flex-direction: row;
-        overflow-x: auto;
         border-right: none;
         border-bottom: 3px solid #ffcc00;
+        overflow-x: auto;
     }
 
     .sidebar h2 {
@@ -151,5 +148,6 @@ footer a:hover {
 
     .main {
         padding: 1rem;
+        height: auto;
     }
 }
